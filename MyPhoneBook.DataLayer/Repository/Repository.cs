@@ -9,8 +9,8 @@ namespace MyPhoneBook.DataLayer.Repository
 {
     public class Repository<IEntity> : IRepository<IEntity> where IEntity : class
     {
-        protected readonly MyLittleBlackBookContext _context;
-        public Repository(MyLittleBlackBookContext context)
+        protected readonly MyPhoneBookContext _context;
+        public Repository(MyPhoneBookContext context)
         {
             _context = context;
         }

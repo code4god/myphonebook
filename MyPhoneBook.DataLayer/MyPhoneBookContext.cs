@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace MyPhoneBook.DataLayer
 {
-    public class MyLittleBlackBookContext : DbContext
+    public class MyPhoneBookContext : DbContext
     {
-        public MyLittleBlackBookContext(DbContextOptions<MyLittleBlackBookContext> options) : base(options)
+        public MyPhoneBookContext(DbContextOptions<MyPhoneBookContext> options) : base(options)
         {
 
         }

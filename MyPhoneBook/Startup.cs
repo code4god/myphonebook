@@ -1,21 +1,15 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using MyPhoneBook.API;
 using MyPhoneBook.DataLayer;
 using MyPhoneBook.DataLayer.Repository;
 using MyPhoneBook.DataLayer.Repository.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.OpenApi.Models;
 
 namespace MyPhoneBook
 {
@@ -33,24 +27,27 @@ namespace MyPhoneBook
         {
             string connectionString = Configuration.GetConnectionString("PhoneBookConnectionString");
             SetMigrate(connectionString);
-            services.AddDbContextPool<MyLittleBlackBookContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContextPool<MyPhoneBookContext>(options => options.UseSqlServer(connectionString));
             services.AddControllers();
             services.AddAutoMapper(typeof(Startup));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IPhoneBookRepository, PhoneBookRepository>();
             services.AddScoped<IEntryRepository, EntryRepository>();
-            services.AddSwaggerGen(c => c.SwaggerDoc(name: "v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "MyLittleBlackBook", Version = "v1" }));
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc(name: "v1", new OpenApiInfo { Title = "MyPhoneBook.API", Version = "v1" });
+            });
         }
 
         private void SetMigrate(string connectionString)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<MyLittleBlackBookContext>();
+            var optionsBuilder = new DbContextOptionsBuilder<MyPhoneBookContext>();
             optionsBuilder.UseSqlServer(
                 connectionString, 
                 builder=> builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null));
 
-            using (var context = new MyLittleBlackBookContext(optionsBuilder.Options))
+            using (var context = new MyPhoneBookContext(optionsBuilder.Options))
             {
                 context.Database.Migrate();
             }
@@ -71,7 +68,7 @@ namespace MyPhoneBook
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("v1/swagger.json", "MyLittleBlackBook");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyPhoneBook.API");
             });
             app.UseHttpsRedirection();
             app.UseRouting();

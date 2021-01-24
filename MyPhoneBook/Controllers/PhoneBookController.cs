@@ -29,7 +29,7 @@ namespace MyPhoneBook.API.Controllers
 
         // cmd controller
         [HttpPut]
-        [Route("phonebook/save")]
+        [Route("phonebook/save", Name ="phoneBookSave")]
         public IActionResult Save(PhoneBook phoneBook)
         {
             _unitOfWork.PhoneBooks.Add(_mapper.Map<DBModel.PhoneBook>(phoneBook));
@@ -40,7 +40,7 @@ namespace MyPhoneBook.API.Controllers
         }
 
         [HttpGet]
-        [Route("phonebook/get/{id}")]
+        [Route("phonebook/get/{id}", Name = "phoneBookGet")]
         public IActionResult Get(int id)
         {
             return Ok(JsonConvert.SerializeObject((_unitOfWork.PhoneBooks.Get(id))));
@@ -48,7 +48,7 @@ namespace MyPhoneBook.API.Controllers
 
         // cmd controller
         [HttpPost]
-        [Route("phonebook/delete")]
+        [Route("phonebook/delete", Name ="phoneBookDelete")]
         public IActionResult Delete(PhoneBook phoneBook)
         {
             _unitOfWork.PhoneBooks.Remove(_mapper.Map<DBModel.PhoneBook>(phoneBook));         
@@ -57,7 +57,7 @@ namespace MyPhoneBook.API.Controllers
         }
         
         [HttpGet]
-        [Route("phonebook/delete/{id}")]
+        [Route("phonebook/delete/{id}", Name = "phoneBookDeleteById")]
         public IActionResult Delete(int id)
         {
             DBModel.PhoneBook item = _unitOfWork.PhoneBooks.Get(id); 
@@ -69,7 +69,7 @@ namespace MyPhoneBook.API.Controllers
         }
 
         [HttpGet]
-        [Route("phonebook/getall")]
+        [Route("phonebook/getall", Name = "phoneBookGetall")]
         public IActionResult GetAll()
         {
             return Ok(JsonConvert.SerializeObject(_unitOfWork.PhoneBooks.GetAll()));

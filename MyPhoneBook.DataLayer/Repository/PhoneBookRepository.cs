@@ -9,7 +9,7 @@ namespace MyPhoneBook.DataLayer.Repository
 {
     public class PhoneBookRepository : Repository<PhoneBook>, IPhoneBookRepository
     {
-        public PhoneBookRepository(MyLittleBlackBookContext context) : base(context)
+        public PhoneBookRepository(MyPhoneBookContext context) : base(context)
         {
             
         }

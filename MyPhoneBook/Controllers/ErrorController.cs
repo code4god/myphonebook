@@ -11,7 +11,8 @@ namespace MyPhoneBook.API.Controllers
     [ApiController]
     public class ErrorController : ControllerBase
     {
-        [Route("/error-local-development")]
+        [HttpGet]
+        [Route("/error-local-development", Name ="errorLocalDevelopment")]
         public IActionResult ErrorLocalDevelopment(
             [FromServices] IWebHostEnvironment webHostEnvironment)
         {
@@ -28,7 +29,8 @@ namespace MyPhoneBook.API.Controllers
                 title: context.Error.Message);
         }
 
-        [Route("/error")]
+        [HttpGet]
+        [Route("/error", Name = "errorProduction")]
         public IActionResult Error() => Problem();
     }
 }

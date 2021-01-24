@@ -18,7 +18,7 @@ namespace MyPhoneBook.API.Controllers
         }
 
         [HttpPut]
-        [Route("entry/save")]
+        [Route("entry/save", Name = "entrySave")]
         public IActionResult Save(Entry entry)
         {
             _unitOfWork.Entries.Add(_mapper.Map<DataLayer.Entity.Entry>(entry));
@@ -29,14 +29,14 @@ namespace MyPhoneBook.API.Controllers
         }
 
         [HttpGet]
-        [Route("entry/get/{id}")]
+        [Route("entry/get/{id}", Name = "entryGet")]
         public IActionResult Get(int id)
         {
             return Ok(_unitOfWork.Entries.Get(id));
         }
 
         [HttpPost]
-        [Route("entry/delete/{id}")]
+        [Route("entry/delete/{id}", Name = "entryDelete")]
         public IActionResult Delete(Entry entry)
         {
             _unitOfWork.Entries.Remove(_mapper.Map<DataLayer.Entity.Entry>(entry));
@@ -44,7 +44,7 @@ namespace MyPhoneBook.API.Controllers
         }
 
         [HttpGet]
-        [Route("entry/getall/{phoneBookId}")]
+        [Route("entry/getall/{phoneBookId}", Name ="entryGetall")]
         public IActionResult GetAll(int phoneBookId)
         {
             return Ok(_unitOfWork.Entries.GetAll(phoneBookId));

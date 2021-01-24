@@ -10,7 +10,7 @@ namespace MyPhoneBook.DataLayer.Repository
 {
     public class EntryRepository : Repository<Entry>, IEntryRepository
     {
-        public EntryRepository(MyLittleBlackBookContext context) : base(context)
+        public EntryRepository(MyPhoneBookContext context) : base(context)
         {
         }
 

@@ -8,8 +8,8 @@ namespace MyPhoneBook.DataLayer.Repository
 {
     public class UnitOfWork : IUnitOfWork
     {
-        protected readonly MyLittleBlackBookContext _context;
-        public UnitOfWork(MyLittleBlackBookContext context)
+        protected readonly MyPhoneBookContext _context;
+        public UnitOfWork(MyPhoneBookContext context)
         {
             _context = context;
             PhoneBooks = new PhoneBookRepository(_context);

@@ -8,7 +8,7 @@ using MyPhoneBook.DataLayer;
 
 namespace MyPhoneBook.DataLayer.Migrations
 {
-    [DbContext(typeof(MyLittleBlackBookContext))]
+    [DbContext(typeof(MyPhoneBookContext))]
     partial class MyLittleBlackBookContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

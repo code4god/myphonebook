@@ -9,7 +9,7 @@ using MyPhoneBook.DataLayer;
 
 namespace MyPhoneBook.DataLayer.Migrations
 {
-    [DbContext(typeof(MyLittleBlackBookContext))]
+    [DbContext(typeof(MyPhoneBookContext))]
     [Migration("20210122130147_PhoneBook")]
     partial class PhoneBook
     {
