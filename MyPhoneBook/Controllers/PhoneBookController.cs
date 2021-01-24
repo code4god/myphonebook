@@ -11,15 +11,8 @@ using DBModel = MyPhoneBook.DataLayer.Entity;
 namespace MyPhoneBook.API.Controllers
 {
 
-    [ApiController] 
+    [ApiController]     
     
-    //1. query controller -> search all or % 
-    //2. cmd controller -> save and [delete]
-    //3. caching 
-    //4. swagger
-    //5. serilog-> save
-    //TblPhone: Name:Siyanda 
-    //TblEntry-> Name:Cell Number:0825989, Name:Home Number:021898
     public class PhoneBookController : Controller
     {
         private IUnitOfWork _unitOfWork;
