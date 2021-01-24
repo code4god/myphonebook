@@ -268,3 +268,4 @@ C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\MyPhoneBook.Web.cs
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\MyPhoneBook.Web.dll
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\MyPhoneBook.Web.pdb
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\MyPhoneBook.Web.genruntimeconfig.cache
+C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\MyPhoneBook.Web.csprojAssemblyReference.cache

@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
+using MyPhoneBook.API.Extensions;
 using MyPhoneBook.API.Model;
 using MyPhoneBook.DataLayer.Repository.Interfaces;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
 using DBModel = MyPhoneBook.DataLayer.Entity;
 
 namespace MyPhoneBook.API.Controllers
@@ -21,10 +24,12 @@ namespace MyPhoneBook.API.Controllers
     {
         private IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        public PhoneBookController(IUnitOfWork unitOfWork, IMapper mapper)
+        private readonly IDistributedCache _cache;
+        public PhoneBookController(IUnitOfWork unitOfWork, IMapper mapper, IDistributedCache cache)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _cache = cache;
         }
 
         // cmd controller
@@ -41,9 +46,15 @@ namespace MyPhoneBook.API.Controllers
 
         [HttpGet]
         [Route("phonebook/get/{id}", Name = "phoneBookGet")]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return Ok(JsonConvert.SerializeObject((_unitOfWork.PhoneBooks.Get(id))));
+            var phoneBook = await _cache.GetCacheValueAsync<PhoneBook>("phoneBookResult");
+            if (phoneBook != null)
+                return Ok(JsonConvert.SerializeObject(phoneBook));
+
+            phoneBook = _mapper.Map<PhoneBook>(_unitOfWork.PhoneBooks.Get(id));
+            await _cache.SetCacheValueAsync("phoneBookResult", phoneBook);
+            return Ok(JsonConvert.SerializeObject(phoneBook));
         }
 
         // cmd controller

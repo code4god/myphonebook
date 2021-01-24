@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using MyPhoneBook.API.Model;
 using MyPhoneBook.DataLayer.Repository.Interfaces;
 
@@ -11,10 +12,13 @@ namespace MyPhoneBook.API.Controllers
     {
         private IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        public EntryController(IUnitOfWork unitOfWork, IMapper mapper)
+        private readonly IDistributedCache _cache;
+
+        public EntryController(IUnitOfWork unitOfWork, IMapper mapper, IDistributedCache cache)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _cache = cache;
         }
 
         [HttpPut]

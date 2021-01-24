@@ -34,6 +34,8 @@ namespace MyPhoneBook
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IPhoneBookRepository, PhoneBookRepository>();
             services.AddScoped<IEntryRepository, EntryRepository>();
+            services.AddSession();
+            services.AddStackExchangeRedisCache(options=> options.Configuration = this.Configuration.GetConnectionString("RedisServerUrl"));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc(name: "v1", new OpenApiInfo { Title = "MyPhoneBook.API", Version = "v1" });

@@ -124,3 +124,4 @@ C:\Source\MyPhoneBook\MyPhoneBook.DataLayer\obj\Debug\netcoreapp3.1\MyPhoneBook.
 C:\Source\MyPhoneBook\MyPhoneBook.DataLayer\obj\Debug\netcoreapp3.1\MyPhoneBook.DataLayer.dll
 C:\Source\MyPhoneBook\MyPhoneBook.DataLayer\obj\Debug\netcoreapp3.1\MyPhoneBook.DataLayer.pdb
 C:\Source\MyPhoneBook\MyPhoneBook.DataLayer\obj\Debug\netcoreapp3.1\MyPhoneBook.DataLayer.genruntimeconfig.cache
+C:\Source\MyPhoneBook\MyPhoneBook.DataLayer\obj\Debug\netcoreapp3.1\MyPhoneBook.DataLayer.csprojAssemblyReference.cache

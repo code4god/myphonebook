@@ -150,3 +150,11 @@ C:\Source\MyPhoneBook\MyPhoneBook\obj\Debug\netcoreapp3.1\MyPhoneBook.API.csproj
 C:\Source\MyPhoneBook\MyPhoneBook\obj\Debug\netcoreapp3.1\MyPhoneBook.API.dll
 C:\Source\MyPhoneBook\MyPhoneBook\obj\Debug\netcoreapp3.1\MyPhoneBook.API.pdb
 C:\Source\MyPhoneBook\MyPhoneBook\obj\Debug\netcoreapp3.1\MyPhoneBook.API.genruntimeconfig.cache
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Pipelines.Sockets.Unofficial.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\StackExchange.Redis.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Serilog.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
