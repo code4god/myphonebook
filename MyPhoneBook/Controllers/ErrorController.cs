@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyPhoneBook.API.Controllers
 {
-    [ApiController]
+    [ApiController] // Global Error Handling.
     public class ErrorController : ControllerBase
     {
         [HttpGet]

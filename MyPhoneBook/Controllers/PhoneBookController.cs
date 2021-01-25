@@ -35,9 +35,8 @@ namespace MyPhoneBook.API.Controllers
             _unitOfWork.PhoneBooks.Add(_mapper.Map<DBModel.PhoneBook>(phoneBook));
             var success = _unitOfWork.Complete();
             _unitOfWork.Dispose();
-
-            //invalidate cache
-            _cache.Remove($"phoneBookResult_{phoneBook.Id}");
+            
+            _cache.Remove($"phoneBookResult_{phoneBook.Id}"); //invalidate cache
             Log.Information($"Save phoneBook: {phoneBook.Id}");
             return Ok(success);
         }
@@ -46,16 +45,14 @@ namespace MyPhoneBook.API.Controllers
         [Route("phonebook/get/{id}", Name = "phoneBookGet")]
         public async Task<IActionResult> Get(int id)
         {
+            Log.Information($"Get phoneBook: {id}");
+
             var phoneBook = await _cache.GetCacheValueAsync<PhoneBook>($"phoneBookResult_{id}");
             if (phoneBook != null)
-            {
-               // _logger.Information($"Get phoneBook: {phoneBook}");
                 return Ok(JsonConvert.SerializeObject(phoneBook)); 
-            }
 
             phoneBook = _mapper.Map<PhoneBook>(_unitOfWork.PhoneBooks.Get(id));
-            await _cache.SetCacheValueAsync($"phoneBookResult_{id}", phoneBook);
-            Log.Information($"Get phoneBook: {@phoneBook}");
+            await _cache.SetCacheValueAsync($"phoneBookResult_{id}", phoneBook);            
 
             return Ok(JsonConvert.SerializeObject(phoneBook));
         }
@@ -90,6 +87,7 @@ namespace MyPhoneBook.API.Controllers
         [Route("phonebook/getall", Name = "phoneBookGetall")]
         public async Task<IActionResult> GetAll()
         {
+            Log.Information("Action: PhoneBook GetAll");
             var phoneBooks = await _cache.GetCacheValueAsync<IEnumerable<PhoneBook>>($"phoneBookResult_all");
             if (phoneBooks != null)
                 return Ok(JsonConvert.SerializeObject(phoneBooks));
@@ -97,7 +95,7 @@ namespace MyPhoneBook.API.Controllers
             phoneBooks = _mapper.Map<IEnumerable<PhoneBook>>(_unitOfWork.PhoneBooks.GetAll());
             await _cache.SetCacheValueAsync($"phoneBookResult_all", phoneBooks);
             //Log.Information("{@phoneBooks}", phoneBooks);
-            Log.Information("Action: PhoneBook GetAll");
+            
             return Ok(JsonConvert.SerializeObject(phoneBooks));
         }
     }
