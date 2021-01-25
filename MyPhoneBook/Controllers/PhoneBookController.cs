@@ -5,27 +5,29 @@ using MyPhoneBook.API.Extensions;
 using MyPhoneBook.API.Model;
 using MyPhoneBook.DataLayer.Repository.Interfaces;
 using Newtonsoft.Json;
+using Serilog;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using DBModel = MyPhoneBook.DataLayer.Entity;
 
 namespace MyPhoneBook.API.Controllers
 {
 
-    [ApiController]     
-    
+    [ApiController]
     public class PhoneBookController : Controller
     {
         private IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly IDistributedCache _cache;
+        //private readonly ILogger _logger;
         public PhoneBookController(IUnitOfWork unitOfWork, IMapper mapper, IDistributedCache cache)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _cache = cache;
+            //_logger = logger;
         }
-
-        // cmd controller
+                
         [HttpPut]
         [Route("phonebook/save", Name ="phoneBookSave")]
         public IActionResult Save(PhoneBook phoneBook)
@@ -34,6 +36,9 @@ namespace MyPhoneBook.API.Controllers
             var success = _unitOfWork.Complete();
             _unitOfWork.Dispose();
 
+            //invalidate cache
+            _cache.Remove($"phoneBookResult_{phoneBook.Id}");
+            Log.Information($"Save phoneBook: {phoneBook.Id}");
             return Ok(success);
         }
 
@@ -41,22 +46,28 @@ namespace MyPhoneBook.API.Controllers
         [Route("phonebook/get/{id}", Name = "phoneBookGet")]
         public async Task<IActionResult> Get(int id)
         {
-            var phoneBook = await _cache.GetCacheValueAsync<PhoneBook>("phoneBookResult");
+            var phoneBook = await _cache.GetCacheValueAsync<PhoneBook>($"phoneBookResult_{id}");
             if (phoneBook != null)
-                return Ok(JsonConvert.SerializeObject(phoneBook));
+            {
+               // _logger.Information($"Get phoneBook: {phoneBook}");
+                return Ok(JsonConvert.SerializeObject(phoneBook)); 
+            }
 
             phoneBook = _mapper.Map<PhoneBook>(_unitOfWork.PhoneBooks.Get(id));
-            await _cache.SetCacheValueAsync("phoneBookResult", phoneBook);
+            await _cache.SetCacheValueAsync($"phoneBookResult_{id}", phoneBook);
+            Log.Information($"Get phoneBook: {@phoneBook}");
+
             return Ok(JsonConvert.SerializeObject(phoneBook));
         }
-
-        // cmd controller
+        
         [HttpPost]
         [Route("phonebook/delete", Name ="phoneBookDelete")]
         public IActionResult Delete(PhoneBook phoneBook)
         {
-            _unitOfWork.PhoneBooks.Remove(_mapper.Map<DBModel.PhoneBook>(phoneBook));         
-
+            
+            _unitOfWork.PhoneBooks.Remove(_mapper.Map<DBModel.PhoneBook>(phoneBook));
+            _cache.Remove($"phoneBookResult_{phoneBook.Id}");
+            Log.Information($"Delete phoneBook: {phoneBook.Id}");
             return Ok(_unitOfWork.Complete());
         }
         
@@ -69,14 +80,25 @@ namespace MyPhoneBook.API.Controllers
             _unitOfWork.PhoneBooks.Remove(item);
             var success = _unitOfWork.Complete();
             _unitOfWork.Dispose();
+
+            _cache.Remove($"phoneBookResult_{id}");
+            Log.Information($"Delete phoneBook: {id}");
             return Ok(success);
         }
 
         [HttpGet]
         [Route("phonebook/getall", Name = "phoneBookGetall")]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(JsonConvert.SerializeObject(_unitOfWork.PhoneBooks.GetAll()));
+            var phoneBooks = await _cache.GetCacheValueAsync<IEnumerable<PhoneBook>>($"phoneBookResult_all");
+            if (phoneBooks != null)
+                return Ok(JsonConvert.SerializeObject(phoneBooks));
+
+            phoneBooks = _mapper.Map<IEnumerable<PhoneBook>>(_unitOfWork.PhoneBooks.GetAll());
+            await _cache.SetCacheValueAsync($"phoneBookResult_all", phoneBooks);
+            //Log.Information("{@phoneBooks}", phoneBooks);
+            Log.Information("Action: PhoneBook GetAll");
+            return Ok(JsonConvert.SerializeObject(phoneBooks));
         }
     }
 }

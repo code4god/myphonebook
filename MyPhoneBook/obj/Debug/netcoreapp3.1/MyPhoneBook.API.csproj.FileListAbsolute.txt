@@ -158,3 +158,12 @@ C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\runtimes\win\lib\netco
 C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Serilog.dll
 C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
 C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Serilog.AspNetCore.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Serilog.Extensions.Hosting.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
+C:\Source\MyPhoneBook\MyPhoneBook\bin\Debug\netcoreapp3.1\log-{Date}.json

@@ -1,0 +1,152 @@
+2021-01-25 12:24:42.491 +02:00 [INF] Application Started
+2021-01-25 12:24:54.517 +02:00 [INF] User profile is available. Using 'C:\Users\geare\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-25 12:24:54.805 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-25 12:24:54.812 +02:00 [INF] Hosting environment: Development
+2021-01-25 12:24:54.812 +02:00 [INF] Content root path: C:\Source\MyPhoneBook\MyPhoneBook
+2021-01-25 12:24:54.860 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/getall  
+2021-01-25 12:24:54.860 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger  
+2021-01-25 12:24:54.915 +02:00 [INF] Request finished in 57.8649ms 301 
+2021-01-25 12:24:54.938 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/index.html  
+2021-01-25 12:24:54.963 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-25 12:24:55.014 +02:00 [INF] Route matched with {action = "GetAll", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-25 12:24:55.020 +02:00 [INF] Request finished in 82.6577ms 200 text/html;charset=utf-8
+2021-01-25 12:24:55.074 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-bundle.js  
+2021-01-25 12:24:55.074 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui.css  
+2021-01-25 12:24:55.112 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js  
+2021-01-25 12:24:55.137 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-01-25 12:24:55.137 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-01-25 12:24:55.139 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-01-25 12:24:55.139 +02:00 [INF] Request finished in 65.8491ms 200 application/javascript
+2021-01-25 12:24:55.139 +02:00 [INF] Request finished in 33.0631ms 200 application/javascript
+2021-01-25 12:24:55.139 +02:00 [INF] Request finished in 65.8517ms 200 text/css
+2021-01-25 12:24:55.404 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API) in 384.2743ms
+2021-01-25 12:24:55.409 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-25 12:24:55.422 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.ILogger' while attempting to activate 'MyPhoneBook.API.Controllers.PhoneBookController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-01-25 12:24:55.495 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.ErrorController.ErrorLocalDevelopment (MyPhoneBook.API)'
+2021-01-25 12:24:55.507 +02:00 [INF] Route matched with {action = "ErrorLocalDevelopment", controller = "Error"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ErrorLocalDevelopment(Microsoft.AspNetCore.Hosting.IWebHostEnvironment) on controller MyPhoneBook.API.Controllers.ErrorController (MyPhoneBook.API).
+2021-01-25 12:24:55.508 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.ErrorController.ErrorLocalDevelopment (MyPhoneBook.API) in 0.7791ms
+2021-01-25 12:24:55.509 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.ErrorController.ErrorLocalDevelopment (MyPhoneBook.API)'
+2021-01-25 12:24:55.509 +02:00 [ERR] An exception was thrown attempting to execute the error handler.
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.ILogger' while attempting to activate 'MyPhoneBook.API.Controllers.ErrorController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+2021-01-25 12:24:55.511 +02:00 [ERR] Connection ID "17942340929939571497", Request ID "8000032a-0003-f900-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.ILogger' while attempting to activate 'MyPhoneBook.API.Controllers.PhoneBookController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-01-25 12:24:55.525 +02:00 [INF] Request finished in 669.3201ms 500 
+2021-01-25 12:24:55.665 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-bundle.js.map  
+2021-01-25 12:24:55.666 +02:00 [INF] Request finished in 1.169ms 404 
+2021-01-25 12:24:55.854 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js.map  
+2021-01-25 12:24:55.857 +02:00 [INF] Request finished in 2.5882ms 404 
+2021-01-25 12:24:55.978 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/v1/swagger.json  
+2021-01-25 12:24:56.092 +02:00 [INF] Request finished in 114.1693ms 200 application/json;charset=utf-8
+2021-01-25 12:25:50.364 +02:00 [INF] Application Started
+2021-01-25 12:25:57.047 +02:00 [INF] User profile is available. Using 'C:\Users\geare\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-25 12:25:57.288 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-25 12:25:57.292 +02:00 [INF] Hosting environment: Development
+2021-01-25 12:25:57.297 +02:00 [INF] Content root path: C:\Source\MyPhoneBook\MyPhoneBook
+2021-01-25 12:25:57.346 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger  
+2021-01-25 12:25:57.346 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/getall  
+2021-01-25 12:25:57.398 +02:00 [INF] Request finished in 57.4531ms 301 
+2021-01-25 12:25:57.424 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/index.html  
+2021-01-25 12:25:57.432 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-25 12:25:57.484 +02:00 [INF] Request finished in 59.8368ms 200 text/html;charset=utf-8
+2021-01-25 12:25:57.491 +02:00 [INF] Route matched with {action = "GetAll", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-25 12:25:57.540 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui.css  
+2021-01-25 12:25:57.541 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-bundle.js  
+2021-01-25 12:25:57.552 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js  
+2021-01-25 12:25:57.602 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-01-25 12:25:57.602 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-01-25 12:25:57.605 +02:00 [INF] Request finished in 64.5176ms 200 text/css
+2021-01-25 12:25:57.605 +02:00 [INF] Request finished in 56.3482ms 200 application/javascript
+2021-01-25 12:25:57.606 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-01-25 12:25:57.606 +02:00 [INF] Request finished in 65.0232ms 200 application/javascript
+2021-01-25 12:25:57.966 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-bundle.js.map  
+2021-01-25 12:25:57.977 +02:00 [INF] Request finished in 8.2867ms 404 
+2021-01-25 12:26:03.827 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js.map  
+2021-01-25 12:26:03.829 +02:00 [INF] Request finished in 934.3336ms 404 
+2021-01-25 12:26:03.976 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/v1/swagger.json  
+2021-01-25 12:26:04.115 +02:00 [INF] Request finished in 139.7731ms 200 application/json;charset=utf-8
+2021-01-25 12:26:05.043 +02:00 [INF] Entity Framework Core 5.0.2 initialized 'MyPhoneBookContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=128 
+2021-01-25 12:26:05.272 +02:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedDate], [p].[ModifiedDate], [p].[Name]
+FROM [PhoneBooks] AS [p]
+2021-01-25 12:26:06.034 +02:00 [INF] Get phoneBook entries: System.Collections.Generic.List`1[MyPhoneBook.API.Model.PhoneBook]
+2021-01-25 12:26:08.446 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-25 12:26:08.453 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API) in 10956.7134ms
+2021-01-25 12:26:08.454 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-25 12:26:08.463 +02:00 [INF] Request finished in 11123.1245ms 200 text/plain; charset=utf-8
+2021-01-25 12:27:43.847 +02:00 [INF] Application Started
+2021-01-25 12:27:49.452 +02:00 [INF] User profile is available. Using 'C:\Users\geare\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-25 12:27:49.655 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-25 12:27:49.656 +02:00 [INF] Hosting environment: Development
+2021-01-25 12:27:49.662 +02:00 [INF] Content root path: C:\Source\MyPhoneBook\MyPhoneBook
+2021-01-25 12:27:49.701 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger  
+2021-01-25 12:27:49.701 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/getall  
+2021-01-25 12:27:49.755 +02:00 [INF] Request finished in 57.5141ms 301 
+2021-01-25 12:27:49.779 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/index.html  
+2021-01-25 12:27:49.785 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-25 12:27:49.842 +02:00 [INF] Route matched with {action = "GetAll", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-25 12:27:49.843 +02:00 [INF] Request finished in 64.0027ms 200 text/html;charset=utf-8
+2021-01-25 12:27:49.898 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui.css  
+2021-01-25 12:27:49.909 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-bundle.js  
+2021-01-25 12:27:49.915 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js  
+2021-01-25 12:27:49.964 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-01-25 12:27:49.964 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-01-25 12:27:49.966 +02:00 [INF] Request finished in 51.1093ms 200 application/javascript
+2021-01-25 12:27:49.966 +02:00 [INF] Request finished in 68.0857ms 200 text/css
+2021-01-25 12:27:49.966 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-01-25 12:27:49.967 +02:00 [INF] Request finished in 57.6602ms 200 application/javascript
+2021-01-25 12:27:53.507 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-bundle.js.map  
+2021-01-25 12:27:53.513 +02:00 [INF] Request finished in 5.9427ms 404 
+2021-01-25 12:27:53.748 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js.map  
+2021-01-25 12:27:53.750 +02:00 [INF] Request finished in 1.8126ms 404 
+2021-01-25 12:27:53.954 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/v1/swagger.json  
+2021-01-25 12:27:54.118 +02:00 [INF] Request finished in 164.1609ms 200 application/json;charset=utf-8
+2021-01-25 12:27:54.216 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-25 12:27:54.226 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API) in 4377.0664ms
+2021-01-25 12:27:54.229 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-25 12:27:54.238 +02:00 [INF] Request finished in 4542.1214ms 200 text/plain; charset=utf-8

@@ -17,7 +17,7 @@ namespace MyPhoneBook.Web.Controllers
         public async Task<ActionResult> Index()
         {
             var result = await HttpClientGet($"phonebook/getall");
-            if (result == null)
+            if (string.IsNullOrWhiteSpace(result))
                 return View();
 
             var test = JsonConvert.DeserializeObject<List<PhoneBookViewModel>>(result).OrderByDescending(t => t.CreatedDate).ToList();

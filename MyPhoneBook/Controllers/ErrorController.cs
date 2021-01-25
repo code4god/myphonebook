@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,13 +25,22 @@ namespace MyPhoneBook.API.Controllers
 
             var context = HttpContext.Features.Get<IExceptionHandlerFeature>();
 
+            Log.Error(context.Error, @context.Error.StackTrace);
+
             return Problem(
                 detail: context.Error.StackTrace,
-                title: context.Error.Message);
+                title: context.Error.Message); 
         }
 
         [HttpGet]
         [Route("/error", Name = "errorProduction")]
-        public IActionResult Error() => Problem();
+        public IActionResult Error()
+        {
+
+            var error = Problem();
+            Log.Error(@error.Value.ToString());
+
+            return error;
+        }
     }
 }
