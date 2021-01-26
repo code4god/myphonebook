@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>@Model.PhoneBook?.Name</h1>
+<h1>Phone Book: @Model.PhoneBook?.Name</h1>
 
 <p>
     <a asp-action="InitializeCreate" asp-route-id="@Model.PhoneBook.Id">Create New Entry</a>
