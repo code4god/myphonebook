@@ -4,18 +4,18 @@
 }
 
 <body>
-    @Html.ActionLink("Create", "Create", new { }) 
-    <table class="table">
+    @Html.ActionLink("Create PhoneBook", "Create", new { })
+    <table id="phoneBook" class="table">
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.Id)
+                    Phone Book
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Name)
+                    Created
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.CreatedDate)
+                    No entries.
                 </th>
                 <th></th>
             </tr>
@@ -25,24 +25,30 @@
             {
                 foreach (var item in Model)
                 {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Id)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CreatedDate)
-                    </td>
-                    <td>                        
-                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                    </td>
-                </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedDate)
+                        </td>
+                        <td>
+                            @Html.ActionLink($"{item.TotalEntries}", "Index", "MyEntry", new { id = item.Id })
+                        </td>
+                        <td>                            
+                            @Html.ActionLink("Delete", "Delete", "myphonebook", new { id = item.Id })
+                        </td>
+                    </tr>
                 }
             }
         </tbody>
     </table>
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#phoneBook').DataTable();
+    });
+</script>
 

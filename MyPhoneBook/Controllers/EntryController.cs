@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
 using MyPhoneBook.API.Model;
 using MyPhoneBook.DataLayer.Repository.Interfaces;
+using Serilog;
+using DBModel = MyPhoneBook.DataLayer.Entity;
 
 namespace MyPhoneBook.API.Controllers
 {
@@ -40,18 +42,35 @@ namespace MyPhoneBook.API.Controllers
         }
 
         [HttpPost]
-        [Route("entry/delete/{id}", Name = "entryDelete")]
+        [Route("entry/delete", Name = "entryDelete")]
         public IActionResult Delete(Entry entry)
         {
             _unitOfWork.Entries.Remove(_mapper.Map<DataLayer.Entity.Entry>(entry));
             return Ok();
         }
 
-        [HttpGet]
-        [Route("entry/getall/{phoneBookId}", Name ="entryGetall")]
-        public IActionResult GetAll(int phoneBookId)
+        [HttpPost]
+        [Route("entry/delete/{id}", Name = "entryDeleteById")]
+        public IActionResult Delete(int id)
         {
-            return Ok(_unitOfWork.Entries.GetAll(phoneBookId));
+            DBModel.Entry item = _unitOfWork.Entries.Get(id);
+
+            _unitOfWork.Entries.Remove(item);
+            var success = _unitOfWork.Complete();
+            _unitOfWork.Dispose();
+
+            _cache.Remove($"entryResult_{id}");
+            _cache.Remove($"entriesResult_all");
+
+            Log.Information($"Delete entry: {id}");
+            return Ok(success);
+        }
+
+        [HttpGet]
+        [Route("entry/getall/{id}", Name ="entryGetall")]
+        public IActionResult GetAllByPhoneBook(int id)
+        {
+            return Ok(_unitOfWork.Entries.GetAll(id));
         }
     }
 }

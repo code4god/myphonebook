@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Entry\View.cshtml" />
+    <Content Remove="Views\MyEntry\Delete.cshtml" />
+    <Content Remove="Views\MyEntry\Details.cshtml" />
+    <Content Remove="Views\MyEntry\Edit.cshtml" />
+    <Content Remove="Views\MyEntry\View.cshtml" />
+    <Content Remove="Views\MyPhoneBook\Details.cshtml" />
+    <Content Remove="Views\MyPhoneBook\Edit.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

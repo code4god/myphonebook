@@ -1,0 +1,59 @@
+﻿@model MyPhoneBook.Web.Models.EntryViewModel;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>@Model.PhoneBook?.Name</h1>
+
+<p>
+    <a asp-action="InitializeCreate" asp-route-id="@Model.PhoneBook.Id">Create New Entry</a>
+</p>
+<table id="entries" class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Phone number
+            </th>
+            <th>
+                Created
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model != null)
+        {
+            foreach (var item in Model.Entries)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedDate)
+                    </td>
+                    <td>
+                        @Html.HiddenFor(modelItem => item.phoneBookId)
+
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id, phoneBookId = item.phoneBookId })
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#entries').DataTable();
+    });
+</script>

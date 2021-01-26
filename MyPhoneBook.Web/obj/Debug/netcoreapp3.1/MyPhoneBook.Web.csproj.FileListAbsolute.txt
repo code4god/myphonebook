@@ -244,17 +244,9 @@ C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\scopedcss\bundle\M
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\MyPhoneBook.Web.TagHelpers.input.cache
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\MyPhoneBook.Web.TagHelpers.output.cache
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\MyPhoneBook.Web.RazorCoreGenerate.cache
-C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\Entry\Create.cshtml.g.cs
-C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\Entry\Delete.cshtml.g.cs
-C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\Entry\Details.cshtml.g.cs
-C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\Entry\Edit.cshtml.g.cs
-C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\Entry\Index.cshtml.g.cs
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\MyPhoneBook\Create.cshtml.g.cs
-C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\MyPhoneBook\Delete.cshtml.g.cs
-C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\MyPhoneBook\Details.cshtml.g.cs
-C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\MyPhoneBook\Edit.cshtml.g.cs
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\MyPhoneBook\Index.cshtml.g.cs
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -269,3 +261,5 @@ C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\MyPhoneBook.Web.dl
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\MyPhoneBook.Web.pdb
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\MyPhoneBook.Web.genruntimeconfig.cache
 C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\MyPhoneBook.Web.csprojAssemblyReference.cache
+C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\MyEntry\Create.cshtml.g.cs
+C:\Source\MyPhoneBook\MyPhoneBook.Web\obj\Debug\netcoreapp3.1\Razor\Views\MyEntry\Index.cshtml.g.cs

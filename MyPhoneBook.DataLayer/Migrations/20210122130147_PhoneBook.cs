@@ -8,14 +8,14 @@ namespace MyPhoneBook.DataLayer.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "PhoneBooks",
+                name: "PhoneBook",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(250)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime", nullable: false),
+                    ModifiedDate = table.Column<DateTime>(type: "datetime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -23,15 +23,15 @@ namespace MyPhoneBook.DataLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Entries",
+                name: "Entry",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(250)", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(20)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime", nullable: false),
+                    ModifiedDate = table.Column<DateTime>(type: "datetime", nullable: false),
                     PhoneBookId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

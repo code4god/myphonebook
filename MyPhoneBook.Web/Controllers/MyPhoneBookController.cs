@@ -13,20 +13,20 @@ namespace MyPhoneBook.Web.Controllers
 {
     public class MyPhoneBookController : BaseController
     {
-        // GET: MyPhoneBookController
         public async Task<ActionResult> Index()
         {
             var result = await HttpClientGet($"phonebook/getall");
             if (string.IsNullOrWhiteSpace(result))
                 return View();
 
-            var test = JsonConvert.DeserializeObject<List<PhoneBookViewModel>>(result).OrderByDescending(t => t.CreatedDate).ToList();
-                //HTTP GET
+            List<PhoneBookViewModel> phoneBookViewModels = new List<PhoneBookViewModel>();
+            phoneBookViewModels = JsonConvert.DeserializeObject<List<PhoneBookViewModel>>(result).OrderByDescending(t => t.CreatedDate).ToList();
+            if (phoneBookViewModels != null)
+                phoneBookViewModels.ForEach(pb => pb.TotalEntries = pb.Entries.Count());
 
-            return View(test);
+            return View(phoneBookViewModels);
         }
 
-        // GET: MyPhoneBookController/Details/5
         public async Task<ActionResult> Details(int id)
         {
             var result = await HttpClientGet($"phonebook/get/{id}");
@@ -36,31 +36,20 @@ namespace MyPhoneBook.Web.Controllers
             return View(phoneBook);
         }
 
-        // GET: MyPhoneBookController/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: MyPhoneBookController/Create
         [HttpPost]
-        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(PhoneBookViewModel viewModel)
         {
-            //try
-            //{
-            //    return RedirectToAction(nameof(Index));
-            //}
-            //catch
-            //{
-                var result = await HttpClientPut($"phonebook/save", JsonConvert.SerializeObject(viewModel));
-                if (result == null)
-                    return View();
-                return RedirectToAction(nameof(Index));
-            //    }
+            var result = await HttpClientPut($"phonebook/save", JsonConvert.SerializeObject(viewModel));
+            if (result == null)
+                return View();
+            return RedirectToAction(nameof(Index));
         }
 
-        // GET: MyPhoneBookController/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
             var result = await HttpClientGet($"phonebook/get/{id}");
@@ -70,7 +59,6 @@ namespace MyPhoneBook.Web.Controllers
             return View(phoneBook);
         }
 
-        // POST: MyPhoneBookController/Edit/5
         [HttpPost]
         public async Task<IActionResult> Edit(PhoneBookViewModel viewModel)
         {
@@ -87,37 +75,14 @@ namespace MyPhoneBook.Web.Controllers
             }
         }
 
-        // GET: MyPhoneBookController/Delete/5
+        //[HttpPost]
+        //[Route("delete/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var result = await HttpClientGet($"phonebook/get/{id}");
-            if (result == null)
-                return View();
-            var viewModel = JsonConvert.DeserializeObject<PhoneBookViewModel>(result);
-            //return View(phoneBook);
-
-             result = await HttpClientPost($"phonebook/delete", JsonConvert.SerializeObject(viewModel));
+            var result = await HttpClientPost($"phonebook/delete/{id}", string.Empty);
             if (result == null)
                 return View();
             return RedirectToAction(nameof(Index));
-        }
-
-        // POST: MyPhoneBookController/Delete/5
-        [HttpPost]
-        //[ValidateAntiForgeryToken]
-        public async Task<IActionResult> Delete(int id, [FromBody]PhoneBookViewModel viewModel)
-        {
-            try
-            {
-                var result = await HttpClientPost($"phonebook/delete", JsonConvert.SerializeObject(viewModel));
-                if (result == null)
-                    return View();
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }

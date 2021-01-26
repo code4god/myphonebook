@@ -6,13 +6,24 @@ using System.Threading.Tasks;
 
 namespace MyPhoneBook.Web.Models
 {
-    public class EntryViewModel : BaseViewModel
+    public class EntryViewModel 
     {
         [Required]
-        public int PhoneBookId { get; set; }
+        public int phoneBookId { get; set; }
+        public PhoneBook PhoneBook { get; set; }
+        public List<Entry> Entries { get; set; }
+    }
+
+    public class Entry : BaseViewModel
+    {
+        public int phoneBookId { get; set; }
+
+        public PhoneBook PhoneBook { get; set; }
         [Required]
         public string PhoneNumber { get; set; }
+    }
 
-        public List<PhoneBookViewModel> PhoneBooks { get; set; }
+    public class PhoneBook : BaseViewModel 
+    {
     }
 }

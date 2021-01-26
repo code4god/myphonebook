@@ -45,8 +45,8 @@ namespace MyPhoneBook
         {
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.Console()
-                //.WriteTo.File(path: @"log.txt", rollingInterval: RollingInterval.Day)
-                .WriteTo.File(new JsonFormatter(), "log-{Date}.json")
+                .WriteTo.File(path: @"log.txt", rollingInterval: RollingInterval.Day)
+                //.WriteTo.File(new JsonFormatter(), "log-{Date}.json")
                 .CreateLogger();
 
         

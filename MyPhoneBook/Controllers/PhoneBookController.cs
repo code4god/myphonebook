@@ -37,6 +37,7 @@ namespace MyPhoneBook.API.Controllers
             _unitOfWork.Dispose();
             
             _cache.Remove($"phoneBookResult_{phoneBook.Id}"); //invalidate cache
+            _cache.Remove($"phoneBookResult_all");
             Log.Information($"Save phoneBook: {phoneBook.Id}");
             return Ok(success);
         }
@@ -60,15 +61,14 @@ namespace MyPhoneBook.API.Controllers
         [HttpPost]
         [Route("phonebook/delete", Name ="phoneBookDelete")]
         public IActionResult Delete(PhoneBook phoneBook)
-        {
-            
+        {            
             _unitOfWork.PhoneBooks.Remove(_mapper.Map<DBModel.PhoneBook>(phoneBook));
             _cache.Remove($"phoneBookResult_{phoneBook.Id}");
             Log.Information($"Delete phoneBook: {phoneBook.Id}");
             return Ok(_unitOfWork.Complete());
         }
         
-        [HttpGet]
+        [HttpPost]
         [Route("phonebook/delete/{id}", Name = "phoneBookDeleteById")]
         public IActionResult Delete(int id)
         {
@@ -79,6 +79,8 @@ namespace MyPhoneBook.API.Controllers
             _unitOfWork.Dispose();
 
             _cache.Remove($"phoneBookResult_{id}");
+            _cache.Remove($"phoneBookResult_all");
+            
             Log.Information($"Delete phoneBook: {id}");
             return Ok(success);
         }

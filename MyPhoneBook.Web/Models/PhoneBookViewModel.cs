@@ -8,6 +8,7 @@ namespace MyPhoneBook.Web.Models
 {
     public class PhoneBookViewModel : BaseViewModel
     {
-        
+        public int TotalEntries { get; set; }
+        public List<EntryViewModel> Entries { get; set; }
     }
 }
