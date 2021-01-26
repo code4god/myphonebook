@@ -80,7 +80,7 @@ namespace MyPhoneBook.API.Controllers
 
             _cache.Remove($"phoneBookResult_{id}");
             _cache.Remove($"phoneBookResult_all");
-            
+            _cache.Remove($"entries_all_for_{id}");
             Log.Information($"Delete phoneBook: {id}");
             return Ok(success);
         }

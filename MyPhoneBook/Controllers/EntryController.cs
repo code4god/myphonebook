@@ -80,7 +80,7 @@ namespace MyPhoneBook.API.Controllers
             _unitOfWork.Dispose();
 
             _cache.Remove($"entryResult_{id}");
-            _cache.Remove($"entries_all");
+            _cache.Remove($"entries_all_for_{item.PhoneBookId}");
 
             Log.Information($"Delete entry: {id}");
             return Ok(success);
@@ -91,7 +91,7 @@ namespace MyPhoneBook.API.Controllers
         public async Task<IActionResult> GetAllByPhoneBook(int id)
         {
             Log.Information("Action: Entries GetAll");
-            var entries = await _cache.GetCacheValueAsync<IEnumerable<Entry>>($"entries_all");
+            var entries = await _cache.GetCacheValueAsync<IEnumerable<Entry>>($"entries_all_for_{id}");
             if (entries != null)
                 return Ok(JsonConvert.SerializeObject(entries));
 

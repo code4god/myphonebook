@@ -3577,3 +3577,598 @@ WHERE [e].[PhoneBookId] = @__phoneBookId_0
 2021-01-26 11:57:22.960 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 3.9982ms
 2021-01-26 11:57:22.960 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
 2021-01-26 11:57:22.961 +02:00 [INF] Request finished in 6.3508ms 200 text/plain; charset=utf-8
+2021-01-26 12:16:11.220 +02:00 [INF] Application Started
+2021-01-26 12:16:23.501 +02:00 [INF] User profile is available. Using 'C:\Users\geare\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-26 12:16:23.775 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-26 12:16:23.775 +02:00 [INF] Hosting environment: Development
+2021-01-26 12:16:23.775 +02:00 [INF] Content root path: C:\Source\MyPhoneBook\MyPhoneBook
+2021-01-26 12:16:23.862 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger  
+2021-01-26 12:16:23.958 +02:00 [INF] Request finished in 102.4168ms 301 
+2021-01-26 12:16:24.036 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/index.html  
+2021-01-26 12:16:24.101 +02:00 [INF] Request finished in 65.1568ms 200 text/html;charset=utf-8
+2021-01-26 12:16:24.290 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui.css  
+2021-01-26 12:16:24.309 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-bundle.js  
+2021-01-26 12:16:24.310 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js  
+2021-01-26 12:16:24.408 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-01-26 12:16:24.408 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-01-26 12:16:24.410 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-01-26 12:16:24.412 +02:00 [INF] Request finished in 106.9731ms 200 application/javascript
+2021-01-26 12:16:24.412 +02:00 [INF] Request finished in 102.32ms 200 application/javascript
+2021-01-26 12:16:24.412 +02:00 [INF] Request finished in 121.689ms 200 text/css
+2021-01-26 12:16:24.905 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-bundle.js.map  
+2021-01-26 12:16:24.957 +02:00 [INF] Request finished in 52.4829ms 404 
+2021-01-26 12:16:25.168 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js.map  
+2021-01-26 12:16:25.171 +02:00 [INF] Request finished in 3.4313ms 404 
+2021-01-26 12:16:28.652 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/v1/swagger.json  
+2021-01-26 12:16:28.855 +02:00 [INF] Request finished in 204.0578ms 200 application/json;charset=utf-8
+2021-01-26 12:17:33.042 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/getall  
+2021-01-26 12:17:33.121 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:17:33.226 +02:00 [INF] Route matched with {action = "GetAll", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:17:38.260 +02:00 [INF] Action: PhoneBook GetAll
+2021-01-26 12:17:41.076 +02:00 [INF] Entity Framework Core 5.0.2 initialized 'MyPhoneBookContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=128 
+2021-01-26 12:17:41.410 +02:00 [INF] Executed DbCommand (91ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedDate], [p].[ModifiedDate], [p].[Name]
+FROM [PhoneBook] AS [p]
+2021-01-26 12:17:47.008 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:17:47.018 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API) in 13787.0372ms
+2021-01-26 12:17:47.020 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:17:48.872 +02:00 [INF] Request finished in 15835.9237ms 200 text/plain; charset=utf-8
+2021-01-26 12:20:01.690 +02:00 [INF] Request starting HTTP/1.1 PUT https://localhost:44309/phonebook/save application/json; charset=utf-8 127
+2021-01-26 12:20:01.726 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Save (MyPhoneBook.API)'
+2021-01-26 12:20:01.813 +02:00 [INF] Route matched with {action = "Save", controller = "PhoneBook"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Save(MyPhoneBook.API.Model.PhoneBook) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:20:02.372 +02:00 [INF] Executed DbCommand (94ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [PhoneBook] ([CreatedDate], [ModifiedDate], [Name])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [PhoneBook]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-01-26 12:20:02.440 +02:00 [INF] Save phoneBook: 0
+2021-01-26 12:20:02.442 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2021-01-26 12:20:02.452 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Save (MyPhoneBook.API) in 638.5216ms
+2021-01-26 12:20:02.452 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Save (MyPhoneBook.API)'
+2021-01-26 12:20:02.454 +02:00 [INF] Request finished in 786.8393ms 200 application/json; charset=utf-8
+2021-01-26 12:20:02.497 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/getall  
+2021-01-26 12:20:02.500 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:20:02.500 +02:00 [INF] Route matched with {action = "GetAll", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:20:10.793 +02:00 [INF] Action: PhoneBook GetAll
+2021-01-26 12:20:10.826 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedDate], [p].[ModifiedDate], [p].[Name]
+FROM [PhoneBook] AS [p]
+2021-01-26 12:20:10.896 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:20:10.899 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API) in 8397.0727ms
+2021-01-26 12:20:10.899 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:20:10.904 +02:00 [INF] Request finished in 8407.1962ms 200 text/plain; charset=utf-8
+2021-01-26 12:20:10.974 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:20:10.976 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:20:10.983 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:20:10.988 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:20:11.155 +02:00 [INF] Executed DbCommand (31ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:20:11.155 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:20:11.156 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 173.1829ms
+2021-01-26 12:20:11.156 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:20:11.157 +02:00 [INF] Request finished in 182.6381ms 200 text/plain; charset=utf-8
+2021-01-26 12:28:10.673 +02:00 [INF] Application Started
+2021-01-26 12:28:16.341 +02:00 [INF] User profile is available. Using 'C:\Users\geare\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-26 12:28:16.657 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-26 12:28:16.658 +02:00 [INF] Hosting environment: Development
+2021-01-26 12:28:16.658 +02:00 [INF] Content root path: C:\Source\MyPhoneBook\MyPhoneBook
+2021-01-26 12:28:16.724 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger  
+2021-01-26 12:28:16.787 +02:00 [INF] Request finished in 66.8479ms 301 
+2021-01-26 12:28:16.815 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/index.html  
+2021-01-26 12:28:16.864 +02:00 [INF] Request finished in 48.6501ms 200 text/html;charset=utf-8
+2021-01-26 12:28:16.952 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui.css  
+2021-01-26 12:28:16.954 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-bundle.js  
+2021-01-26 12:28:16.956 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js  
+2021-01-26 12:28:17.040 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-01-26 12:28:17.040 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-01-26 12:28:17.041 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-01-26 12:28:17.042 +02:00 [INF] Request finished in 87.7688ms 200 application/javascript
+2021-01-26 12:28:17.042 +02:00 [INF] Request finished in 90.2642ms 200 text/css
+2021-01-26 12:28:17.042 +02:00 [INF] Request finished in 86.3ms 200 application/javascript
+2021-01-26 12:28:18.165 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/v1/swagger.json  
+2021-01-26 12:28:18.165 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-bundle.js.map  
+2021-01-26 12:28:18.165 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js.map  
+2021-01-26 12:28:18.201 +02:00 [INF] Request finished in 36.131ms 404 
+2021-01-26 12:28:18.202 +02:00 [INF] Request finished in 36.1311ms 404 
+2021-01-26 12:28:18.275 +02:00 [INF] Request finished in 110.4056ms 200 application/json;charset=utf-8
+2021-01-26 12:28:19.835 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/getall  
+2021-01-26 12:28:19.840 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:28:19.879 +02:00 [INF] Route matched with {action = "GetAll", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:28:20.084 +02:00 [INF] Action: PhoneBook GetAll
+2021-01-26 12:28:21.037 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:28:21.044 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API) in 1160.2487ms
+2021-01-26 12:28:21.047 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:28:21.055 +02:00 [INF] Request finished in 1221.1678ms 200 text/plain; charset=utf-8
+2021-01-26 12:28:21.305 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:28:21.307 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:28:21.325 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:28:21.339 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:28:21.369 +02:00 [INF] Entity Framework Core 5.0.2 initialized 'MyPhoneBookContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=128 
+2021-01-26 12:28:21.789 +02:00 [INF] Executed DbCommand (73ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:28:21.795 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:28:21.796 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 471.0743ms
+2021-01-26 12:28:21.796 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:28:21.800 +02:00 [INF] Request finished in 495.3813ms 200 text/plain; charset=utf-8
+2021-01-26 12:29:53.596 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/getall  
+2021-01-26 12:29:53.630 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:29:53.640 +02:00 [INF] Route matched with {action = "GetAll", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:29:53.663 +02:00 [INF] Action: PhoneBook GetAll
+2021-01-26 12:29:53.681 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:29:53.684 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API) in 41.9434ms
+2021-01-26 12:29:53.685 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:29:53.688 +02:00 [INF] Request finished in 101.6058ms 200 text/plain; charset=utf-8
+2021-01-26 12:29:53.711 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:29:53.713 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:29:53.713 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:29:53.721 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:29:53.924 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:29:53.927 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:29:53.929 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 214.8747ms
+2021-01-26 12:29:53.929 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:29:53.931 +02:00 [INF] Request finished in 220.5815ms 200 text/plain; charset=utf-8
+2021-01-26 12:30:01.523 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:30:01.526 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:30:01.528 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:30:01.530 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:30:01.553 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:30:01.555 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:30:01.558 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 28.8086ms
+2021-01-26 12:30:01.558 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:30:01.560 +02:00 [INF] Request finished in 36.823ms 200 text/plain; charset=utf-8
+2021-01-26 12:30:01.588 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:30:01.590 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:30:01.612 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:30:01.619 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:30:01.625 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:30:01.626 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 14.1862ms
+2021-01-26 12:30:01.626 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:30:01.627 +02:00 [INF] Request finished in 39.6945ms 200 text/plain; charset=utf-8
+2021-01-26 12:30:05.827 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:30:05.828 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:30:05.830 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:30:05.832 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:30:05.836 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:30:05.837 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 6.2311ms
+2021-01-26 12:30:05.838 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:30:05.838 +02:00 [INF] Request finished in 12.9181ms 200 text/plain; charset=utf-8
+2021-01-26 12:30:16.116 +02:00 [INF] Request starting HTTP/1.1 PUT https://localhost:44309/entry/save/ application/json; charset=utf-8 157
+2021-01-26 12:30:16.117 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.Save (MyPhoneBook.API)'
+2021-01-26 12:30:16.123 +02:00 [INF] Route matched with {action = "Save", controller = "Entry"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Save(MyPhoneBook.API.Model.Entry) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:30:16.560 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Entry] ([CreatedDate], [ModifiedDate], [Name], [PhoneBookId], [PhoneNumber])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Entry]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-01-26 12:30:16.611 +02:00 [INF] Save phoneBook: 0
+2021-01-26 12:30:16.612 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2021-01-26 12:30:16.614 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.Save (MyPhoneBook.API) in 490.9761ms
+2021-01-26 12:30:16.614 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.Save (MyPhoneBook.API)'
+2021-01-26 12:30:16.615 +02:00 [INF] Request finished in 501.0375ms 200 application/json; charset=utf-8
+2021-01-26 12:30:16.655 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:30:16.655 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:30:16.656 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:30:16.656 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:30:16.683 +02:00 [INF] Executed DbCommand (24ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:30:16.694 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:30:16.694 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 38.2277ms
+2021-01-26 12:30:16.694 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:30:16.694 +02:00 [INF] Request finished in 39.7758ms 200 text/plain; charset=utf-8
+2021-01-26 12:30:16.703 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:30:16.703 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:30:16.703 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:30:16.703 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:30:16.706 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:30:16.706 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 2.784ms
+2021-01-26 12:30:16.706 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:30:16.706 +02:00 [INF] Request finished in 3.6374ms 200 text/plain; charset=utf-8
+2021-01-26 12:31:41.851 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:31:41.867 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:31:41.870 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:31:41.877 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:31:42.022 +02:00 [INF] Executed DbCommand (95ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:31:42.031 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:31:42.033 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 162.1773ms
+2021-01-26 12:31:42.034 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:31:42.036 +02:00 [INF] Request finished in 188.1747ms 200 text/plain; charset=utf-8
+2021-01-26 12:31:42.059 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:31:42.060 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:31:42.061 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:31:42.062 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:31:42.072 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:31:42.073 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 12.2411ms
+2021-01-26 12:31:42.073 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:31:42.074 +02:00 [INF] Request finished in 15.1027ms 200 text/plain; charset=utf-8
+2021-01-26 12:31:48.039 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:31:48.040 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:31:48.040 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:31:48.041 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:31:48.046 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:31:48.047 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 6.019ms
+2021-01-26 12:31:48.047 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:31:48.047 +02:00 [INF] Request finished in 8.1798ms 200 text/plain; charset=utf-8
+2021-01-26 12:31:51.502 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:31:51.503 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:31:51.503 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:31:51.504 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:31:51.510 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:31:51.511 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:31:51.512 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 8.5172ms
+2021-01-26 12:31:51.512 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:31:51.513 +02:00 [INF] Request finished in 10.7812ms 200 text/plain; charset=utf-8
+2021-01-26 12:31:51.519 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:31:51.519 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:31:51.520 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:31:51.521 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:31:51.523 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:31:51.524 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 4.3213ms
+2021-01-26 12:31:51.524 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:31:51.525 +02:00 [INF] Request finished in 5.9163ms 200 text/plain; charset=utf-8
+2021-01-26 12:31:55.765 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/getall  
+2021-01-26 12:31:55.766 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:31:55.766 +02:00 [INF] Route matched with {action = "GetAll", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:31:55.766 +02:00 [INF] Action: PhoneBook GetAll
+2021-01-26 12:31:55.769 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:31:55.769 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API) in 3.2051ms
+2021-01-26 12:31:55.769 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:31:55.769 +02:00 [INF] Request finished in 4.6031ms 200 text/plain; charset=utf-8
+2021-01-26 12:31:55.777 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:31:55.777 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:31:55.777 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:31:55.778 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:31:55.783 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:31:55.784 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:31:55.785 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 7.6993ms
+2021-01-26 12:31:55.785 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:31:55.785 +02:00 [INF] Request finished in 8.3168ms 200 text/plain; charset=utf-8
+2021-01-26 12:31:58.832 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:31:58.833 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:31:58.833 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:31:58.834 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:31:58.849 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:31:58.851 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:31:58.851 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 18.2082ms
+2021-01-26 12:31:58.851 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:31:58.852 +02:00 [INF] Request finished in 19.8039ms 200 text/plain; charset=utf-8
+2021-01-26 12:31:58.857 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:31:58.857 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:31:58.857 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:31:58.858 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:31:58.861 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:31:58.861 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 4.0713ms
+2021-01-26 12:31:58.862 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:31:58.862 +02:00 [INF] Request finished in 5.3956ms 200 text/plain; charset=utf-8
+2021-01-26 12:32:55.012 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:44309/entry/delete/1 application/json; charset=utf-8 0
+2021-01-26 12:32:55.020 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.Delete (MyPhoneBook.API)'
+2021-01-26 12:32:55.046 +02:00 [INF] Route matched with {action = "Delete", controller = "Entry"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:32:55.263 +02:00 [INF] Executed DbCommand (93ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[Id] = @__p_0
+2021-01-26 12:32:55.451 +02:00 [INF] Executed DbCommand (153ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Entry]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2021-01-26 12:32:55.476 +02:00 [INF] Delete entry: 1
+2021-01-26 12:32:55.477 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2021-01-26 12:32:55.484 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.Delete (MyPhoneBook.API) in 437.1186ms
+2021-01-26 12:32:55.484 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.Delete (MyPhoneBook.API)'
+2021-01-26 12:32:55.484 +02:00 [INF] Request finished in 474.8353ms 200 application/json; charset=utf-8
+2021-01-26 12:32:55.538 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:32:55.540 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:32:55.540 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:32:55.541 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:32:55.563 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:32:55.565 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:32:55.565 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 25.1024ms
+2021-01-26 12:32:55.566 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:32:55.566 +02:00 [INF] Request finished in 27.7923ms 200 text/plain; charset=utf-8
+2021-01-26 12:32:55.576 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:32:55.576 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:32:55.576 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:32:55.576 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:32:55.581 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:32:55.582 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 5.5123ms
+2021-01-26 12:32:55.582 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:32:55.582 +02:00 [INF] Request finished in 6.4575ms 200 text/plain; charset=utf-8
+2021-01-26 12:33:06.899 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:33:06.900 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:33:06.900 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:33:06.901 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:33:06.916 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:33:06.917 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:33:06.918 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 17.9988ms
+2021-01-26 12:33:06.918 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:33:06.919 +02:00 [INF] Request finished in 19.6979ms 200 text/plain; charset=utf-8
+2021-01-26 12:33:06.924 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:33:06.925 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:33:06.925 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:33:06.927 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:33:06.931 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:33:06.932 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 6.4499ms
+2021-01-26 12:33:06.932 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:33:06.932 +02:00 [INF] Request finished in 8.1026ms 200 text/plain; charset=utf-8
+2021-01-26 12:33:11.421 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/getall  
+2021-01-26 12:33:11.423 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:33:11.423 +02:00 [INF] Route matched with {action = "GetAll", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:33:11.423 +02:00 [INF] Action: PhoneBook GetAll
+2021-01-26 12:33:11.427 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:33:11.428 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API) in 5.0052ms
+2021-01-26 12:33:11.428 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:33:11.429 +02:00 [INF] Request finished in 7.4881ms 200 text/plain; charset=utf-8
+2021-01-26 12:33:11.440 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:33:11.440 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:33:11.441 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:33:11.441 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:33:11.449 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:33:11.451 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:33:11.452 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 11.2722ms
+2021-01-26 12:33:11.452 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:33:11.453 +02:00 [INF] Request finished in 12.7652ms 200 text/plain; charset=utf-8
+2021-01-26 12:34:08.377 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:34:08.399 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:34:08.410 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:34:08.424 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:34:08.656 +02:00 [INF] Executed DbCommand (136ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:34:08.672 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:34:08.682 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 271.832ms
+2021-01-26 12:34:08.682 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:34:08.688 +02:00 [INF] Request finished in 316.2174ms 200 text/plain; charset=utf-8
+2021-01-26 12:34:13.335 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:34:13.335 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:34:13.338 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:34:13.339 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:34:13.350 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:34:13.351 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 12.6646ms
+2021-01-26 12:34:13.351 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:34:13.352 +02:00 [INF] Request finished in 17.3024ms 200 text/plain; charset=utf-8
+2021-01-26 12:36:24.047 +02:00 [INF] Application Started
+2021-01-26 12:36:36.267 +02:00 [INF] User profile is available. Using 'C:\Users\geare\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-26 12:36:36.516 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-26 12:36:36.526 +02:00 [INF] Hosting environment: Development
+2021-01-26 12:36:36.526 +02:00 [INF] Content root path: C:\Source\MyPhoneBook\MyPhoneBook
+2021-01-26 12:36:36.580 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger  
+2021-01-26 12:36:36.630 +02:00 [INF] Request finished in 54.4778ms 301 
+2021-01-26 12:36:36.667 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/index.html  
+2021-01-26 12:36:36.720 +02:00 [INF] Request finished in 52.5782ms 200 text/html;charset=utf-8
+2021-01-26 12:36:36.854 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui.css  
+2021-01-26 12:36:36.856 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js  
+2021-01-26 12:36:36.868 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-bundle.js  
+2021-01-26 12:36:36.953 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-01-26 12:36:36.953 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-01-26 12:36:36.954 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-01-26 12:36:36.956 +02:00 [INF] Request finished in 101.6919ms 200 text/css
+2021-01-26 12:36:36.956 +02:00 [INF] Request finished in 99.7327ms 200 application/javascript
+2021-01-26 12:36:36.956 +02:00 [INF] Request finished in 88.5653ms 200 application/javascript
+2021-01-26 12:36:37.339 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-bundle.js.map  
+2021-01-26 12:36:37.385 +02:00 [INF] Request finished in 45.9549ms 404 
+2021-01-26 12:36:39.231 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js.map  
+2021-01-26 12:36:39.235 +02:00 [INF] Request finished in 3.9193ms 404 
+2021-01-26 12:36:39.339 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/v1/swagger.json  
+2021-01-26 12:36:39.439 +02:00 [INF] Request finished in 100.3892ms 200 application/json;charset=utf-8
+2021-01-26 12:36:53.034 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/getall  
+2021-01-26 12:36:53.038 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:36:53.076 +02:00 [INF] Route matched with {action = "GetAll", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:36:53.261 +02:00 [INF] Action: PhoneBook GetAll
+2021-01-26 12:36:53.787 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:36:53.793 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API) in 712.3484ms
+2021-01-26 12:36:53.797 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:36:53.804 +02:00 [INF] Request finished in 769.5969ms 200 text/plain; charset=utf-8
+2021-01-26 12:36:54.004 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:36:54.005 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:36:54.017 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:36:54.029 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:36:54.050 +02:00 [INF] Entity Framework Core 5.0.2 initialized 'MyPhoneBookContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=128 
+2021-01-26 12:36:54.416 +02:00 [INF] Executed DbCommand (43ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:36:54.422 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:36:54.423 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 404.9522ms
+2021-01-26 12:36:54.423 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:36:54.426 +02:00 [INF] Request finished in 422.5574ms 200 text/plain; charset=utf-8
+2021-01-26 12:38:31.102 +02:00 [INF] Application Started
+2021-01-26 12:38:37.777 +02:00 [INF] User profile is available. Using 'C:\Users\geare\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-26 12:38:38.062 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-26 12:38:38.063 +02:00 [INF] Hosting environment: Development
+2021-01-26 12:38:38.063 +02:00 [INF] Content root path: C:\Source\MyPhoneBook\MyPhoneBook
+2021-01-26 12:38:38.113 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger  
+2021-01-26 12:38:38.166 +02:00 [INF] Request finished in 56.5682ms 301 
+2021-01-26 12:38:38.197 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/index.html  
+2021-01-26 12:38:38.257 +02:00 [INF] Request finished in 59.4013ms 200 text/html;charset=utf-8
+2021-01-26 12:38:38.349 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui.css  
+2021-01-26 12:38:38.359 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-bundle.js  
+2021-01-26 12:38:38.373 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js  
+2021-01-26 12:38:38.440 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-01-26 12:38:38.440 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-01-26 12:38:38.442 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-01-26 12:38:38.443 +02:00 [INF] Request finished in 83.8822ms 200 application/javascript
+2021-01-26 12:38:38.443 +02:00 [INF] Request finished in 70.7561ms 200 application/javascript
+2021-01-26 12:38:38.443 +02:00 [INF] Request finished in 94.4461ms 200 text/css
+2021-01-26 12:38:38.911 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-bundle.js.map  
+2021-01-26 12:38:38.952 +02:00 [INF] Request finished in 41.5896ms 404 
+2021-01-26 12:38:40.024 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js.map  
+2021-01-26 12:38:40.028 +02:00 [INF] Request finished in 3.2616ms 404 
+2021-01-26 12:38:40.151 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44309/swagger/v1/swagger.json  
+2021-01-26 12:38:40.256 +02:00 [INF] Request finished in 105.2808ms 200 application/json;charset=utf-8
+2021-01-26 12:39:21.595 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/getall  
+2021-01-26 12:39:21.663 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:39:21.764 +02:00 [INF] Route matched with {action = "GetAll", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:39:22.073 +02:00 [INF] Action: PhoneBook GetAll
+2021-01-26 12:39:25.041 +02:00 [INF] Entity Framework Core 5.0.2 initialized 'MyPhoneBookContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=128 
+2021-01-26 12:39:25.374 +02:00 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedDate], [p].[ModifiedDate], [p].[Name]
+FROM [PhoneBook] AS [p]
+2021-01-26 12:39:25.689 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:39:25.701 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API) in 3930.4971ms
+2021-01-26 12:39:25.702 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:39:25.716 +02:00 [INF] Request finished in 4124.194ms 200 text/plain; charset=utf-8
+2021-01-26 12:39:25.941 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:39:25.943 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:39:25.959 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:39:25.978 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:39:26.132 +02:00 [INF] Executed DbCommand (62ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:39:26.134 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:39:26.135 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 175.0669ms
+2021-01-26 12:39:26.139 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:39:26.139 +02:00 [INF] Request finished in 198.7982ms 200 text/plain; charset=utf-8
+2021-01-26 12:39:39.216 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:39:39.219 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:39:39.219 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:39:39.223 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:39:39.239 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:39:39.240 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:39:39.241 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 21.3478ms
+2021-01-26 12:39:39.241 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:39:39.243 +02:00 [INF] Request finished in 27.2042ms 200 text/plain; charset=utf-8
+2021-01-26 12:39:39.259 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:39:39.261 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:39:39.267 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:39:39.269 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:39:39.319 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedDate], [p].[ModifiedDate], [p].[Name]
+FROM [PhoneBook] AS [p]
+WHERE [p].[Id] = @__p_0
+2021-01-26 12:39:39.328 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:39:39.329 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 61.7703ms
+2021-01-26 12:39:39.329 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:39:39.329 +02:00 [INF] Request finished in 70.1236ms 200 text/plain; charset=utf-8
+2021-01-26 12:39:44.074 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:39:44.075 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:39:44.076 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:39:44.077 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:39:44.128 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:39:44.130 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 53.4544ms
+2021-01-26 12:39:44.134 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:39:44.134 +02:00 [INF] Request finished in 60.3912ms 200 text/plain; charset=utf-8
+2021-01-26 12:39:55.364 +02:00 [INF] Request starting HTTP/1.1 PUT https://localhost:44309/entry/save/ application/json; charset=utf-8 157
+2021-01-26 12:39:55.366 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.Save (MyPhoneBook.API)'
+2021-01-26 12:39:55.370 +02:00 [INF] Route matched with {action = "Save", controller = "Entry"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Save(MyPhoneBook.API.Model.Entry) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:39:55.626 +02:00 [INF] Executed DbCommand (60ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Entry] ([CreatedDate], [ModifiedDate], [Name], [PhoneBookId], [PhoneNumber])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Entry]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-01-26 12:39:55.672 +02:00 [INF] Save phoneBook: 0
+2021-01-26 12:39:55.672 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2021-01-26 12:39:55.674 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.Save (MyPhoneBook.API) in 304.1372ms
+2021-01-26 12:39:55.675 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.Save (MyPhoneBook.API)'
+2021-01-26 12:39:55.675 +02:00 [INF] Request finished in 313.3894ms 200 application/json; charset=utf-8
+2021-01-26 12:39:55.715 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:39:55.715 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:39:55.716 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:39:55.716 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:39:55.726 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:39:55.729 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:39:55.729 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 13.8015ms
+2021-01-26 12:39:55.729 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:39:55.730 +02:00 [INF] Request finished in 14.5969ms 200 text/plain; charset=utf-8
+2021-01-26 12:39:55.736 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:39:55.736 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:39:55.736 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:39:55.736 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:39:55.738 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:39:55.738 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 2.1254ms
+2021-01-26 12:39:55.738 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:39:55.738 +02:00 [INF] Request finished in 2.7111ms 200 text/plain; charset=utf-8
+2021-01-26 12:40:31.351 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:40:31.388 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:40:31.397 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:40:31.409 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:40:31.429 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:40:31.435 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 36.4839ms
+2021-01-26 12:40:31.436 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:40:31.441 +02:00 [INF] Request finished in 103.4981ms 200 text/plain; charset=utf-8
+2021-01-26 12:41:14.710 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:41:14.725 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:41:14.730 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:41:14.735 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:41:14.923 +02:00 [INF] Executed DbCommand (102ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:41:14.941 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:41:14.947 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 216.6723ms
+2021-01-26 12:41:14.947 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:41:14.951 +02:00 [INF] Request finished in 245.6964ms 200 text/plain; charset=utf-8
+2021-01-26 12:41:14.973 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/get/1  
+2021-01-26 12:41:14.975 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:41:14.976 +02:00 [INF] Route matched with {action = "Get", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:41:14.978 +02:00 [INF] Get phoneBook: 1
+2021-01-26 12:41:14.984 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:41:14.985 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API) in 8.3443ms
+2021-01-26 12:41:14.987 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.Get (MyPhoneBook.API)'
+2021-01-26 12:41:14.988 +02:00 [INF] Request finished in 14.7206ms 200 text/plain; charset=utf-8
+2021-01-26 12:41:21.833 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/phonebook/getall  
+2021-01-26 12:41:21.835 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:41:21.836 +02:00 [INF] Route matched with {action = "GetAll", controller = "PhoneBook"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MyPhoneBook.API.Controllers.PhoneBookController (MyPhoneBook.API).
+2021-01-26 12:41:21.836 +02:00 [INF] Action: PhoneBook GetAll
+2021-01-26 12:41:21.860 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:41:21.861 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API) in 25.7791ms
+2021-01-26 12:41:21.862 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.PhoneBookController.GetAll (MyPhoneBook.API)'
+2021-01-26 12:41:21.862 +02:00 [INF] Request finished in 29.7463ms 200 text/plain; charset=utf-8
+2021-01-26 12:41:21.870 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/entry/getall/1  
+2021-01-26 12:41:21.871 +02:00 [INF] Executing endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:41:21.871 +02:00 [INF] Route matched with {action = "GetAllByPhoneBook", controller = "Entry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByPhoneBook(Int32) on controller MyPhoneBook.API.Controllers.EntryController (MyPhoneBook.API).
+2021-01-26 12:41:21.872 +02:00 [INF] Action: Entries GetAll
+2021-01-26 12:41:21.882 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__phoneBookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[ModifiedDate], [e].[Name], [e].[PhoneBookId], [e].[PhoneNumber]
+FROM [Entry] AS [e]
+WHERE [e].[PhoneBookId] = @__phoneBookId_0
+2021-01-26 12:41:21.883 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-26 12:41:21.883 +02:00 [INF] Executed action MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API) in 11.7475ms
+2021-01-26 12:41:21.884 +02:00 [INF] Executed endpoint 'MyPhoneBook.API.Controllers.EntryController.GetAllByPhoneBook (MyPhoneBook.API)'
+2021-01-26 12:41:21.884 +02:00 [INF] Request finished in 13.4278ms 200 text/plain; charset=utf-8
