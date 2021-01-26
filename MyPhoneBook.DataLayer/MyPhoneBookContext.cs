@@ -12,16 +12,8 @@ namespace MyPhoneBook.DataLayer
 
         }
 
-        public DbSet<PhoneBook> PhoneBooks { get; set; }
-        public DbSet<Entry> Entries { get; set; }
-
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-
-        //    modelBuilder.Entity<BaseEntity>()
-        //            .Property(s => s.Id)
-        //            .ValueGeneratedOnAdd();
-        //}
+        public DbSet<PhoneBook> PhoneBook { get; set; }
+        public DbSet<Entry> Entry { get; set; }
 
         public override int SaveChanges()
         {

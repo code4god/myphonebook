@@ -16,7 +16,7 @@ namespace MyPhoneBook.DataLayer.Repository
 
         public IEnumerable<Entry> GetAll(int phoneBookId)
         {
-            return _context.Entries.Where(entry=> entry.PhoneBookId == phoneBookId);
+            return _context.Entry.Where(entry=> entry.PhoneBookId == phoneBookId);
         }
     }
 }

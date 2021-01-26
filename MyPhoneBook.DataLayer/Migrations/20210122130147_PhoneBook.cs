@@ -19,7 +19,7 @@ namespace MyPhoneBook.DataLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PhoneBooks", x => x.Id);
+                    table.PrimaryKey("PK_PhoneBook", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -36,28 +36,28 @@ namespace MyPhoneBook.DataLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Entries", x => x.Id);
+                    table.PrimaryKey("PK_Entry", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Entries_PhoneBooks_PhoneBookId",
+                        name: "FK_Entry_PhoneBook_PhoneBookId",
                         column: x => x.PhoneBookId,
-                        principalTable: "PhoneBooks",
+                        principalTable: "PhoneBook",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Entries_PhoneBookId",
-                table: "Entries",
+                name: "IX_Entry_PhoneBookId",
+                table: "Entry",
                 column: "PhoneBookId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Entries");
+                name: "Entry");
 
             migrationBuilder.DropTable(
-                name: "PhoneBooks");
+                name: "PhoneBook");
         }
     }
 }

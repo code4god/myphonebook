@@ -20,11 +20,21 @@ namespace MyPhoneBook.Web.Controllers
                 return View();
 
             List<PhoneBookViewModel> phoneBookViewModels = new List<PhoneBookViewModel>();
-            phoneBookViewModels = JsonConvert.DeserializeObject<List<PhoneBookViewModel>>(result).OrderByDescending(t => t.CreatedDate).ToList();
+            phoneBookViewModels = JsonConvert.DeserializeObject<List<PhoneBookViewModel>>(result).OrderBy(t => t.Name).ToList();
             if (phoneBookViewModels != null)
-                phoneBookViewModels.ForEach(pb => pb.TotalEntries = pb.Entries.Count());
+                await SetPhoneBookTotalEntries(phoneBookViewModels);
 
             return View(phoneBookViewModels);
+        }
+
+        private async Task SetPhoneBookTotalEntries(List<PhoneBookViewModel> phoneBookViewModels)
+        {
+            foreach (var book in phoneBookViewModels)
+            {
+                var bookResult = await HttpClientGet($"entry/getall/{book.Id}"); // will check cache first.
+                if (!string.IsNullOrWhiteSpace(bookResult))
+                    book.TotalEntries = JsonConvert.DeserializeObject<List<PhoneBookViewModel>>(bookResult).Count();
+            }
         }
 
         public async Task<ActionResult> Details(int id)
@@ -49,34 +59,7 @@ namespace MyPhoneBook.Web.Controllers
                 return View();
             return RedirectToAction(nameof(Index));
         }
-
-        public async Task<IActionResult> Edit(int id)
-        {
-            var result = await HttpClientGet($"phonebook/get/{id}");
-            if (result == null)
-                return View();
-            var phoneBook = JsonConvert.DeserializeObject<PhoneBookViewModel>(result);
-            return View(phoneBook);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Edit(PhoneBookViewModel viewModel)
-        {
-            try
-            {
-                var result = await HttpClientPut($"phonebook/save", JsonConvert.SerializeObject(viewModel));
-                if (result == null)
-                    return View();
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //[HttpPost]
-        //[Route("delete/{id}")]
+        
         public async Task<IActionResult> Delete(int id)
         {
             var result = await HttpClientPost($"phonebook/delete/{id}", string.Empty);
