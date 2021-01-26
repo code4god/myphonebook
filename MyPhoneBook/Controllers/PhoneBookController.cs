@@ -98,7 +98,7 @@ namespace MyPhoneBook.API.Controllers
             await _cache.SetCacheValueAsync($"phoneBookResult_all", phoneBooks);
             //Log.Information("{@phoneBooks}", phoneBooks);
             
-            return Ok(phoneBooks == null ? string.Empty : JsonConvert.SerializeObject(phoneBooks));
+            return Ok(JsonConvert.SerializeObject(phoneBooks));
         }
     }
 }
